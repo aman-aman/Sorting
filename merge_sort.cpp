@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+//aman kumar jha
 void merge(int arr[], int l, int m, int r)
 {
     int i, j, k;
@@ -41,8 +42,6 @@ void merge(int arr[], int l, int m, int r)
         k++;
     }
 }
- 
-
 void mergesort(int arr[], int l, int r)
 {
     if (l < r)
@@ -53,16 +52,6 @@ void mergesort(int arr[], int l, int r)
         merge(arr, l, m, r);
     }
 }
- 
-
-void printarray(int arr[], int size)
-{
-    for (int i=0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}
- 
-
 int main()
 {
     int n;
@@ -72,10 +61,8 @@ int main()
     for(int i=0;i<n;i++)
     {
     	cin>>arr[i];
-	}
- 
+    }
     mergesort(arr,0,n-1);
- 
-    printf("\nSorted array is \n");
-    printarray(arr,n);
+    for (int i=0;i<n;i++)
+        printf("%d ",arr[i]);
 }
